@@ -24,3 +24,48 @@ This project is a fun side experiment to explore if a bot can automate the proce
 ### Installation
 1. Install Python 3.x on your machine.
 2. Install Selenium package using pip:
+
+```
+pip install selenium
+```
+3. Download ChromeDriver from [here](https://sites.google.com/a/chromium.org/chromedriver/downloads) and ensure it's in your PATH.
+
+### Running the Program
+1. Clone or download this repository to your local machine.
+2. Update the script with the relevant website URL, username, and password.
+3. Execute the script:
+```
+python homework_bot.py
+```
+
+## Code Description
+
+### `homework_bot.py`
+- **Key Features**:
+- Navigates to specific URLs.
+- Logs in using provided credentials.
+- Fills out short answer and multiple-choice questions by revealing and submitting answers.
+- Interacts with animations and submits responses.
+
+- **Classes and Methods**:
+- `zyBot`: Main class for the bot.
+ - `launch_browser()`: Initializes and opens the browser.
+ - `navigate_to()`: Navigates to a specified URL.
+ - `accept_alert()`: Handles browser alerts.
+ - `click_button()`, `fill_form()`: Interact with web page elements.
+ - `wait_for_landing_page()`: Waits for a specific element to ensure the page has loaded.
+ - `PA_shortAnswer_fill()`, `PA_MC_fill()`, `PA_animation_fill()`: Functions to fill out different types of participation activities.
+ - `login()`: Logs into the website.
+ - `autoFill()`: Automates the process of filling out activities for multiple sections.
+ - `print_info()`: Prints current bot settings.
+
+- **Selenium WebDriver**:
+- Utilizes the Selenium WebDriver to control the browser.
+- Implements explicit waits to handle dynamic content.
+
+## Disclaimer
+This project was created for educational purposes and should not be used to violate academic integrity policies.
+
+## Author
+- Logan F
+
